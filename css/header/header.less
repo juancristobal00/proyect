@@ -1,0 +1,54 @@
+.portada{
+    background: url('../img/ed.jpg');
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    .displayflex-center;
+    flex-direction: column;
+    hr{
+        width: 15%;
+    }}
+
+.menubox{
+     display: inline-flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 75px;
+    width: 80vw;
+    position: absolute;
+    left: 10%;
+    box-shadow: black 5px  5px 25px;
+    .menucontainer{
+        .displayflex-center;  
+    }
+
+    .menu{
+        .displayflex-center;
+        .linkmenu{
+            padding: 0px 25px;
+        }
+        .linkmenu::after{
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: black;
+            transition: width .3s;
+            }
+        .linkmenu:hover::after{
+                width: 100%;
+                transition: width .3s ;
+    }}
+
+    .menuicon{
+        display: inline-flex;
+        flex-direction: column;
+        .icon img{
+            width: 15px;
+            height: 15px;
+            padding: 10px;
+        }
+    }
+    }
+        
+

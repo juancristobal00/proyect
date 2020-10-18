@@ -1,0 +1,1 @@
+var nombre = document.forms[0].nombre.value;

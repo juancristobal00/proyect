@@ -1,0 +1,213 @@
+@media (min-width:300px) and (max-width:700px){
+    #btnmenu:checked ~ .menucontainer{
+    visibility: visible;    
+    transition: 1s ease;
+    transform: translatex(0px)}
+    .menubox{
+        width: 100%;
+        left: 0px;
+        .menucontainer{
+            visibility: hidden;
+            transition: all 500ms ease;
+            transform: translatex(-100%);
+            position: absolute;
+            top: 75px;
+            width: 50%;
+            background: rgba(255, 255, 255, 75%);
+            height: 400px;
+            .menu{
+            flex-direction: column;
+                .linkmenu{
+                    height: 200px;
+                    .displayflex-center;
+                    color: black;
+                }
+                .linkmenu::after{
+                    display: none;
+                    }
+                }}
+            
+        
+        .burger, .lblmenu{
+            display: block;
+        }
+        .lblmenu{
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            #spn1,#spn2,#spn3{
+                position: absolute;
+                background: black;
+                width: 25px;
+                height: 3px;
+                border-radius: 3px;
+                transition: all 400ms ease;
+                left: 15px;
+            }
+            #spn1{
+                top: 23.3px;
+            }
+            #spn2{
+                top: 33.3px;
+            }
+            #spn3{
+                top: 43.3px;
+            }
+        }
+        #btnmenu:checked ~ .burger .lblmenu #spn1{
+            transform: rotate(135deg);
+            top: 33.3px;
+        }
+        #btnmenu:checked ~ .burger .lblmenu #spn3{
+            transform: rotate(-135deg);
+            top: 33.3px;
+        }
+        #btnmenu:checked ~ .burger .lblmenu #spn2{
+            background: transparent;
+        }}
+    // CONTACTO RESPONSIVE
+    .formulario{
+        grid-template: 100px 100px 75px 30px 100px 100px 75px e("/") 33.5% 16.5% 16.5% 33.5%;
+        .nombre{
+        grid-row: 1 e("/") 2 ;
+        grid-column: 1 e("/") 3 ;
+        }
+        .email{
+        grid-row: 1 e("/") 2 ;
+        grid-column: 3 e("/") 5 ;
+        }
+        .mensaje{
+        grid-row: 2 e("/") 3 ;
+        grid-column: 1 e("/") 5 ;
+        }
+        .enviar{
+        grid-row: 3 e("/") 4 ;
+        grid-column: 1 e("/") 5 ;
+        background-color: black;
+        color: white;
+        }
+        .mail{
+        grid-row: 5 e("/") 6 ;
+        grid-column: 1 e("/") 5 ;
+        }
+        .telefono{
+        grid-row: 6 e("/") 7 ;
+        grid-column: 1 e("/") 5 ;
+        
+        }
+        .redes{
+        grid-row: 7 e("/") 8 ;
+        grid-column: 2 e("/") 4 ;
+        background-color: black;
+            a{
+                padding: 10px;
+                img{
+                width: 15px;
+            }}}
+        .mail,.telefono{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }}
+    .galeria{
+        height: 700px;
+        .boton img,a{
+            height: 50px;
+            width: 30px;
+        }
+        .galerialist{
+        gap: 5px;
+        grid-template: repeat(4,110px) 220px e("/") repeat(2,110px);
+        
+
+    }
+    .postgaleria:nth-of-type(9){
+        grid-column: 1 e("/") 3;
+    }
+}}
+
+@media (min-width:300px) and (max-width:400px){
+    .galeria{
+        height: 700px;
+        .boton img,a{
+            height: 50px;
+            width: 30px;
+        }
+        .galerialist{
+        gap: 5px;
+        grid-template: repeat(4,110px) 220px e("/") repeat(2,110px);
+
+    }
+    }
+    // GALERIA INSTAGRAM
+    .galeriaig{
+        grid-template: repeat(2,150px) e("/") repeat(2,150px);
+        height: 300px;
+    }
+}
+@media (min-width:400px) and (max-width:500px){
+    .galeria{
+        height: 1000px;
+        .galerialist{
+            gap: 5px;
+            grid-template: repeat(4,160px) 320px e("/") repeat(2,160px);
+    }}
+    
+    .galeriaig{
+        grid-template: repeat(2,200px) e("/") repeat(2,200px);
+        height: 400px;}
+
+}
+@media (min-width:500px) and (max-width:600px){
+    .galeria{
+        height: 1285px;
+        .galerialist{
+            gap: 5px;
+            grid-template: repeat(4,210px) 420px e("/") repeat(2,210px);
+    }}
+    
+    .galeriaig{
+        grid-template: repeat(2,250px) e("/") repeat(2,250px);
+        height: 500px;}
+}
+@media (min-width:600px) and (max-width:700px){
+    .galeria{
+        height: 15005px;
+        .galerialist{
+            gap: 5px;
+            grid-template: repeat(4,260px) 520px e("/") repeat(2,260px);
+    }}
+    .galeriaig{
+        grid-template: repeat(2,250px) e("/") repeat(2,250px);
+        height: 500px;}
+}
+@media (min-width:700px) and (max-width:800px){
+    .galeria{
+        height: 620px;
+        .galerialist{
+            gap: 5px;
+            grid-template: repeat(3,200px) e("/") repeat(3,200px);
+    }}
+    .galeriaig{
+        grid-template: repeat(2,350px) e("/") repeat(2,350px);
+        height: 700px;}
+}
+@media (min-width:800px) and (max-width:900px){
+    .galeria{
+        height: 770px;
+        .galerialist{
+            gap: 5px;
+            grid-template: repeat(3,225px) e("/") repeat(3,225px);
+    }}
+    .galeriaig{
+        grid-template: repeat(2,400px) e("/") repeat(2,400px);
+        height: 800px;}
+}
+@media (min-width:900px) and (max-width:1000px){
+    .galeria{
+        height: 770px;
+        .galerialist{
+            gap: 5px;
+            grid-template: repeat(3,260px) e("/") repeat(3,260px);
+            height:760px;
+    }}}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css.css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,100;1,600;1,800&display=swap" rel="stylesheet">
+</head>
+<body>     
+    <header class="menubox">
+        <input  type="checkbox" name="" id="btnmenu">
+        <div class="menucontainer">
+            <nav id="menu" class="menu">
+                <a class="linkmenu" style=" text-decoration: none;" class="link-menu" href="">Mi trabajo</a>
+                <a class="linkmenu" style=" text-decoration: none;" class="link-menu" href="">Contacto</a>
+            </nav>
+        </div>
+        <div class="burger">
+            <label for="btnmenu" class="lblmenu">
+                <span id="spn1"></span>
+                <span id="spn2"></span>
+                <span id="spn3"></span>
+            </label>
+        </div>
+        <figure class="menuicon"">
+            <a class="icon" href=""><img src="./img/Icono Facebook.svg" alt=""></a>
+            <a class="icon" href=""><img src="./img/Icono Instagram.svg" alt=""></a>
+        </figure>
+    </header>
+    <header class="portada">
+        <h1>Eduardo Rivas</h1>
+        <hr>
+        <h3>Fotografo</h3>
+    </header> 
+        <section class="galeria">
+                <div>
+                    <a class="boton left" href=""><img src="./img/boton atras.svg" alt=""></a>
+                </div>
+            <div class="galerialist">
+                <div style="background-image: url(./img/img1.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img2.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img3.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img4.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img5.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img6.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img7.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img8.jpg);" class="postgaleria"></div>
+                <div style="background-image: url(./img/img9.jpg);" class="postgaleria"></div>
+            </div>
+                <div>
+                    <a class="boton right" href=""><img src="./img/boton adelante.svg" alt=""></a>
+                </div>
+        </section>
+<section class="tituloinstagram"><span><p class="tittle">Instagram</p></span></section>  
+<section class="galeriaig">
+    <div style="background-image: url(./img/img2.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(./img/img3.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(./img/img4.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(./img/img5.jpg);" class="postinstagram"></div>
+</section>   
+<section class="titulocontacto"><span><p class="tittle">Contacto</p></span></section>  
+<section class="contacto">
+    <form class="formulario" id="form" name="formu" action="">
+        <div class="item nombre">
+            <input style=" text-align: center; width: 100%; border: none; background-color: #F5F5F5 ;" type="text" name="nombre" id="nombre" placeholder="nombre" maxlength="20" class="space" >
+        </div>
+        <div class="item email">
+            <input style=" text-align: center; width: 100%; border: none; background-color: #F5F5F5 ; "type="email" name="email" id="email" placeholder="email" maxlength="40" required class="space">
+        </div>
+        <div class="item mensaje">
+            <input style=" text-align: center; width: 100%; border: none; background-color: #F5F5F5 ;" type="text" name="mensaje" id="mensaje" placeholder="mensaje" maxlength="200" class="space" >
+        </div>
+        <div class="item enviar">
+            <input onclick="comprobar()" type="submit" value="enviar" style="cursor: pointer; height: 100%; width: 100%; background-color: black; border: none; color: white;">
+        </div>
+    
+        <div class="itemrrss mail"><figure><img src="./css/img/email.png" alt=""></figure><p>+56993668681</p></div>
+        <div class="itemrrss telefono"><figure><img src="./css/img/call.png" alt=""></figure><p>edu.rivas@gmail.com</p></div>
+        <div class="itemrrss redes">
+            <figure class="icon-rrss">
+                <a href=""><img class="icon"src="./img/icon fb.svg" alt=""></a>
+                <a href=""><img class="icon" src="./img/icon ig.svg" alt=""></a>
+            </figure>
+        </div>
+    </form>
+</section>
+</div>
+</body>
+</html>
