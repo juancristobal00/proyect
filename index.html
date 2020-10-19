@@ -12,8 +12,8 @@
         <input  type="checkbox" name="" id="btnmenu">
         <div class="menucontainer">
             <nav id="menu" class="menu">
-                <a class="linkmenu" style=" text-decoration: none;" class="link-menu" href="">Mi trabajo</a>
-                <a class="linkmenu" style=" text-decoration: none;" class="link-menu" href="">Contacto</a>
+                <a class="linkmenu" style=" text-decoration: none;" class="link-menu" href="#1">Mi trabajo</a>
+                <a class="linkmenu" style=" text-decoration: none;" class="link-menu" href="#2">Contacto</a>
             </nav>
         </div>
         <div class="burger">
@@ -32,21 +32,22 @@
         <h1>Eduardo Rivas</h1>
         <hr>
         <h3>Fotografo</h3>
-    </header> 
-        <section class="galeria">
+    </header>
+    <section class="titulogaleria"><span><p class="tittle">Galeria</p></span></section>  
+        <section id="1" class="galeria">
                 <div>
                     <a class="boton left" href=""><img src="./img/boton atras.svg" alt=""></a>
                 </div>
             <div class="galerialist">
-                <div style="background-image: url(./img/img1.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img2.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img3.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img4.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img5.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img6.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img7.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img8.jpg);" class="postgaleria"></div>
-                <div style="background-image: url(./img/img9.jpg);" class="postgaleria"></div>
+                <div class="postgaleria"><img src="img/img1.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img2.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img3.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img4.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img5.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img6.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img7.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img8.jpg" alt=""></div>
+                <div class="postgaleria"><img src="img/img9.jpg" alt=""></div>
             </div>
                 <div>
                     <a class="boton right" href=""><img src="./img/boton adelante.svg" alt=""></a>
@@ -58,9 +59,11 @@
     <div style="background-image: url(./img/img3.jpg);" class="postinstagram"></div>
     <div style="background-image: url(./img/img4.jpg);" class="postinstagram"></div>
     <div style="background-image: url(./img/img5.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(./img/img6.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(./img/img7.jpg);" class="postinstagram"></div>
 </section>   
 <section class="titulocontacto"><span><p class="tittle">Contacto</p></span></section>  
-<section class="contacto">
+<section id="2" class="contacto">
     <form class="formulario" id="form" name="formu" action="">
         <div class="item nombre">
             <input style=" text-align: center; width: 100%; border: none; background-color: #F5F5F5 ;" type="text" name="nombre" id="nombre" placeholder="nombre" maxlength="20" class="space" >
