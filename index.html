@@ -7,7 +7,106 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,100;1,600;1,800&display=swap" rel="stylesheet">
 </head>
-<body>     
+<body>
+    <script>
+    var desactivarlabel = function(){
+        document.getElementById("labelbtn1").style.zIndex="0"
+        document.getElementById("labelbtn2").style.zIndex="0"
+        document.getElementById("labelbtn3").style.zIndex="0"
+        document.getElementById("labelbtn4").style.zIndex="0"
+        document.getElementById("labelbtn5").style.zIndex="0"
+        document.getElementById("labelbtn6").style.zIndex="0"
+        document.getElementById("labelbtn7").style.zIndex="0"
+        document.getElementById("labelbtn8").style.zIndex="0"
+        document.getElementById("labelbtn9").style.zIndex="0" 
+    }
+    var activarlabel = function(){
+        document.getElementById("labelbtn1").style.zIndex="2"
+        document.getElementById("labelbtn2").style.zIndex="2"
+        document.getElementById("labelbtn3").style.zIndex="2"
+        document.getElementById("labelbtn4").style.zIndex="2"
+        document.getElementById("labelbtn5").style.zIndex="2"
+        document.getElementById("labelbtn6").style.zIndex="2"
+        document.getElementById("labelbtn7").style.zIndex="2"
+        document.getElementById("labelbtn8").style.zIndex="2"
+        document.getElementById("labelbtn9").style.zIndex="2"  
+    }
+    var desactivar = function(op){
+    var x = window.scrollX;
+    var y = window.scrollY;
+    if(op == btn){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img1").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn2){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img2").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn3){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img3").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn4){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img4").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn5){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img5").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn6){
+        window.onscroll = function(){window.scrollTo(x,y)}      
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img6").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn7){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img7").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn8){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img8").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }else if(op == btn9){
+        window.onscroll = function(){window.scrollTo(x,y)}
+        document.getElementById("arrowback").classList.add("onarrow")
+        document.getElementById("img9").classList.add("active")
+        document.getElementById("ov").classList.add("ovactive")
+        desactivarlabel();
+    }}
+
+    var cerrarlightbox = function(btn10){
+        window.onscroll = null;
+        document.getElementById("arrowback").classList.remove("onarrow")
+        document.getElementById("ov").classList.remove("ovactive")
+        document.getElementById("img1").classList.remove("active")
+        document.getElementById("img2").classList.remove("active")
+        document.getElementById("img3").classList.remove("active")
+        document.getElementById("img4").classList.remove("active")
+        document.getElementById("img5").classList.remove("active")
+        document.getElementById("img6").classList.remove("active")
+        document.getElementById("img7").classList.remove("active")
+        document.getElementById("img8").classList.remove("active")
+        document.getElementById("img9").classList.remove("active")
+        activarlabel();
+    }
+    </script>
+
     <header class="menubox">
         <input  type="checkbox" name="" id="btnmenu">
         <div class="menucontainer">
@@ -24,8 +123,8 @@
             </label>
         </div>
         <figure class="menuicon"">
-            <a class="icon" href=""><img src="./img/Icono Facebook.svg" alt=""></a>
-            <a class="icon" href=""><img src="./img/Icono Instagram.svg" alt=""></a>
+            <a class="icon" href=""><img src="./img/icons/Icono Facebook.svg" alt=""></a>
+            <a class="icon" href=""><img src="./img/icons/Icono Instagram.svg" alt=""></a>
         </figure>
     </header>
     <header class="portada">
@@ -34,23 +133,36 @@
         <h3>Fotografo</h3>
     </header>
     <section class="titulogaleria"><span><p class="tittle">Galeria</p></span></section>  
+    <input class="input_lightbox" onclick="desactivar(btn)" type="checkbox" name="" id="btn">
+    <input class="input_lightbox" onclick="desactivar(btn2)" type="checkbox" name="" id="btn2">
+    <input class="input_lightbox" onclick="desactivar(btn3)" type="checkbox" name="" id="btn3">
+    <input class="input_lightbox" onclick="desactivar(btn4)" type="checkbox" name="" id="btn4">
+    <input class="input_lightbox" onclick="desactivar(btn5)" type="checkbox" name="" id="btn5">
+    <input class="input_lightbox" onclick="desactivar(btn6)" type="checkbox" name="" id="btn6">
+    <input class="input_lightbox" onclick="desactivar(btn7)" type="checkbox" name="" id="btn7">
+    <input class="input_lightbox" onclick="desactivar(btn8)" type="checkbox" name="" id="btn8">
+    <input class="input_lightbox" onclick="desactivar(btn9)" type="checkbox" name="" id="btn9">
+    <div id="ov" class="overflow"></div>
+        <figure id="arrowback" class="figure_arrow" style="width: 30px; padding: 20px 20px;">
+            <a href="#1" onclick="cerrarlightbox()" id="btn10"><img src="/img/icons/arrowback.svg" alt=""></a>
+        </figure>
         <section id="1" class="galeria">
                 <div>
-                    <a class="boton left" href=""><img src="./img/boton atras.svg" alt=""></a>
+                    <a class="boton left" href=""><img src="./img/icons/boton atras.svg" alt=""></a>
                 </div>
-            <div class="galerialist">
-                <div class="postgaleria"><img src="img/img1.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img2.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img3.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img4.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img5.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img6.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img7.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img8.jpg" alt=""></div>
-                <div class="postgaleria"><img src="img/img9.jpg" alt=""></div>
+            <div id="galerialist" class="galerialist">
+                <div class="postgaleria"><label id="labelbtn1" for="btn"></label><img class="post_img" id="img1"  src="img/img1.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn2" for="btn2"></label><img class="post_img" id="img2" src="img/img2.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn3" for="btn3"></label><img class="post_img" id="img3" src="img/img3.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn4" for="btn4"></label><img class="post_img" id="img4" src="img/img4.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn5" for="btn5"></label><img class="post_img" id="img5" src="img/img5.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn6" for="btn6"></label><img class="post_img" id="img6" src="img/img6.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn7" for="btn7"></label><img class="post_img" id="img7" src="img/img7.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn8" for="btn8"></label><img class="post_img" id="img8" src="img/img8.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn9" for="btn9"></label><img class="post_img" id="img9" src="img/img9.jpg" alt=""></div>
             </div>
                 <div>
-                    <a class="boton right" href=""><img src="./img/boton adelante.svg" alt=""></a>
+                    <a class="boton right" href=""><img src="./img/icons/boton adelante.svg" alt=""></a>
                 </div>
         </section>
 <section class="tituloinstagram"><span><p class="tittle">Instagram</p></span></section>  
@@ -78,12 +190,12 @@
             <input onclick="comprobar()" type="submit" value="enviar" style="cursor: pointer; height: 100%; width: 100%; background-color: black; border: none; color: white;">
         </div>
     
-        <div class="itemrrss mail"><figure><img src="./css/img/email.png" alt=""></figure><p>+56993668681</p></div>
-        <div class="itemrrss telefono"><figure><img src="./css/img/call.png" alt=""></figure><p>edu.rivas@gmail.com</p></div>
+        <div class="itemrrss mail"><figure><img src="css/img/email.png" alt=""></figure><p>+56993668681</p></div>
+        <div class="itemrrss telefono"><figure><img src="css/img/call.png" alt=""></figure><p>edu.rivas@gmail.com</p></div>
         <div class="itemrrss redes">
             <figure class="icon-rrss">
-                <a href=""><img class="icon"src="./img/icon fb.svg" alt=""></a>
-                <a href=""><img class="icon" src="./img/icon ig.svg" alt=""></a>
+                <a href=""><img class="icon"src="./img/icons/icon fb.svg" alt=""></a>
+                <a href=""><img class="icon" src="./img/icons/icon ig.svg" alt=""></a>
             </figure>
         </div>
     </form>

@@ -3,6 +3,9 @@
   font-family: 'piazzolla';
   font-weight: lighter;
 }
+.input_lightbox {
+  visibility: hidden;
+}
 .displayflex-between {
   display: flex;
   justify-content: space-between;
@@ -28,6 +31,7 @@
 .tituloinstagram,
 .titulocontacto,
 .titulogaleria {
+  position: relative;
   margin: 50px 0px;
   text-align: center;
 }
@@ -124,10 +128,63 @@
   display: grid;
   gap: 5px;
   grid-template: repeat(7, 150px) / repeat(3, 300px);
+  transition: all 1s ease;
 }
-.galeria .galerialist .postgaleria img {
-  height: 100%;
+.galeria .galerialist .postgaleria .post_img {
   width: 100%;
+  height: 100%;
+  box-shadow: black 1px 1px 2px;
+  z-index: 1;
+}
+.galeria .galerialist .postgaleria #labelbtn1,
+.galeria .galerialist #labelbtn2,
+.galeria .galerialist #labelbtn3,
+.galeria .galerialist #labelbtn4,
+.galeria .galerialist #labelbtn5,
+.galeria .galerialist #labelbtn6,
+.galeria .galerialist #labelbtn7,
+.galeria .galerialist #labelbtn8,
+.galeria .galerialist #labelbtn9 {
+  position: absolute;
+  width: 300px;
+  height: 305px;
+  z-index: 2;
+}
+.galeria .galerialist .postgaleria:hover .post_img {
+  transition: all 500ms ease;
+  transform: scale(1.025);
+  filter: blur(1.25px);
+}
+.overflow {
+  display: none;
+  background: rgba(0, 0, 0, 0.95);
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.figure_arrow {
+  display: none;
+}
+.onarrow {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 20px ;
+  left: 20px;
+}
+.galeria .galerialist .postgaleria .post_img.active {
+  position: fixed;
+  left: calc(50% - 125px);
+  top: calc(50% - 125px);
+  width: 250px;
+  height: 250px;
+  transform: translateZ(10px);
+}
+.ovactive {
+  display: block;
 }
 .galeriaig {
   display: grid;
