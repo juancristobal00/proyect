@@ -177,10 +177,10 @@
 }
 .galeria .galerialist .postgaleria .post_img.active {
   position: fixed;
-  left: calc(50% - 125px);
-  top: calc(50% - 125px);
-  width: 250px;
-  height: 250px;
+  left: calc(50% - 25%);
+  width: 50%;
+  top: 15%;
+  height: 70%;
   transform: translateZ(10px);
 }
 .ovactive {
