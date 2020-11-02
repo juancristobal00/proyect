@@ -9,6 +9,20 @@
 </head>
 <body>
     <script>
+        const http = require('http');
+
+const hostname = '192.168.1.14';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
     var desactivarlabel = function(){
         document.getElementById("labelbtn1").style.zIndex="0"
         document.getElementById("labelbtn2").style.zIndex="0"
@@ -123,8 +137,8 @@
             </label>
         </div>
         <figure class="menuicon"">
-            <a class="icon" href=""><img src="./img/icons/Icono Facebook.svg" alt=""></a>
-            <a class="icon" href=""><img src="./img/icons/Icono Instagram.svg" alt=""></a>
+            <a class="icon" href=""><img src="css/img/icons/Icono Facebook.svg" alt=""></a>
+            <a class="icon" href=""><img src="css/img/icons/Icono Instagram.svg" alt=""></a>
         </figure>
     </header>
     <header class="portada">
@@ -144,22 +158,22 @@
     <input class="input_lightbox" onclick="desactivar(btn9)" type="checkbox" name="" id="btn9">
     <div id="ov" class="overflow"></div>
         <figure id="arrowback" class="figure_arrow" style="width: 30px; padding: 20px 20px;">
-            <a href="#1" onclick="cerrarlightbox()" id="btn10"><img src="/img/icons/arrowback.svg" alt=""></a>
+            <a href="#1" onclick="cerrarlightbox()" id="btn10"><img src="css/img/icons/arrowback.svg" alt=""></a>
         </figure>
         <section id="1" class="galeria">
                 <div>
-                    <a class="boton left" href=""><img src="./img/icons/boton atras.svg" alt=""></a>
+                    <a class="boton left" href=""><img src="css/img/icons/boton atras.svg" alt=""></a>
                 </div>
             <div id="galerialist" class="galerialist">
-                <div class="postgaleria"><label id="labelbtn1" for="btn"></label><img class="post_img" id="img1"  src="img/img1.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn2" for="btn2"></label><img class="post_img" id="img2" src="img/img2.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn3" for="btn3"></label><img class="post_img" id="img3" src="img/img3.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn4" for="btn4"></label><img class="post_img" id="img4" src="img/img4.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn5" for="btn5"></label><img class="post_img" id="img5" src="img/img5.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn6" for="btn6"></label><img class="post_img" id="img6" src="img/img6.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn7" for="btn7"></label><img class="post_img" id="img7" src="img/img7.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn8" for="btn8"></label><img class="post_img" id="img8" src="img/img8.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn9" for="btn9"></label><img class="post_img" id="img9" src="img/img9.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn1" for="btn"></label><img class="post_img" id="img1"  src="css/img/img1.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn2" for="btn2"></label><img class="post_img" id="img2" src="css/img/img2.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn3" for="btn3"></label><img class="post_img" id="img3" src="css/img/img3.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn4" for="btn4"></label><img class="post_img" id="img4" src="css/img/img4.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn5" for="btn5"></label><img class="post_img" id="img5" src="css/img/img5.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn6" for="btn6"></label><img class="post_img" id="img6" src="css/img/img6.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn7" for="btn7"></label><img class="post_img" id="img7" src="css/img/img7.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn8" for="btn8"></label><img class="post_img" id="img8" src="css/img/img8.jpg" alt=""></div>
+                <div class="postgaleria"><label id="labelbtn9" for="btn9"></label><img class="post_img" id="img9" src="css/img/img9.jpg" alt=""></div>
             </div>
                 <div>
                     <a class="boton right" href=""><img src="./img/icons/boton adelante.svg" alt=""></a>
@@ -168,18 +182,18 @@
         <section class="paralax">
             <h1>Sigueme en mis redes sociales</h1>
             <div class="icon-parallax">
-                <figure><img class="icon" src="./img/icons/icon fb.svg" alt=""></figure>
-                <figure><img class="icon" src="./img/icons/icon ig.svg" alt=""></figure>
+                <figure><img class="icon" src="css/img/icons/icon fb.svg" alt=""></figure>
+                <figure><img class="icon" src="css/img/icons/icon ig.svg" alt=""></figure>
             </div>
         </section>
 <section class="tituloinstagram"><span><p class="tittle">Instagram</p></span></section>  
 <section class="galeriaig">
-    <div style="background-image: url(./img/img2.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(./img/img3.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(./img/img4.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(./img/img5.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(./img/img6.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(./img/img7.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(css/img/img2.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(css/img/img3.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(css/img/img4.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(css/img/img5.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(css/img/img6.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(css/img/img7.jpg);" class="postinstagram"></div>
 </section>   
 <section class="titulocontacto"><span><p class="tittle">Contacto</p></span></section>  
 <section id="2" class="contacto">
@@ -201,8 +215,8 @@
         <div class="itemrrss telefono"><figure><img src="css/img/call.png" alt=""></figure><p>edu.rivas@gmail.com</p></div>
         <div class="itemrrss redes">
             <figure class="icon-rrss">
-                <a href=""><img class="icon"src="./img/icons/icon fb.svg" alt=""></a>
-                <a href=""><img class="icon" src="./img/icons/icon ig.svg" alt=""></a>
+                <a href=""><img class="icon"src="css/img/icons/icon fb.svg" alt=""></a>
+                <a href=""><img class="icon" src="css/img/icons/icon ig.svg" alt=""></a>
             </figure>
         </div>
     </form>

@@ -1,0 +1,21 @@
+{
+  "name": "lalo",
+  "version": "1.0.0",
+  "description": "servidor local ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "build": "webpackno"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juancristobal00/proyect.git"
+  },
+  "author": "Juan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juancristobal00/proyect/issues"
+  },
+  "homepage": "https://github.com/juancristobal00/proyect#readme"
+}
