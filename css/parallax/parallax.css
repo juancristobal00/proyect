@@ -1,0 +1,19 @@
+.paralax {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/imageparalax.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  flex-direction: column;
+  text-shadow: black 1px 2px 1px;
+}
+.paralax .icon-parallax {
+  display: flex;
+}
+.paralax .icon-parallax figure .icon {
+  width: 25px;
+  padding: 45px 15px;
+}

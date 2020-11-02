@@ -58,6 +58,7 @@
 .portada {
   background: url('../img/ed.jpg');
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   color: white;
   display: flex;
@@ -117,7 +118,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 1080px;
+  height: 700px;
+  padding-bottom: 100px;
 }
 .galeria .boton img,
 .galeria a {
@@ -127,7 +129,7 @@
 .galeria .galerialist {
   display: grid;
   gap: 5px;
-  grid-template: repeat(7, 150px) / repeat(3, 300px);
+  grid-template: repeat(7, 100px) / repeat(3, 200px);
   transition: all 1s ease;
 }
 .galeria .galerialist .postgaleria .post_img {
@@ -146,8 +148,8 @@
 .galeria .galerialist #labelbtn8,
 .galeria .galerialist #labelbtn9 {
   position: absolute;
-  width: 300px;
-  height: 305px;
+  width: 200px;
+  height: 205px;
   z-index: 2;
 }
 .galeria .galerialist .postgaleria:hover .post_img {
@@ -179,12 +181,31 @@
   position: fixed;
   left: calc(50% - 25%);
   width: 50%;
-  top: 15%;
-  height: 70%;
+  top: 25%;
+  height: 50%;
   transform: translateZ(10px);
 }
 .ovactive {
   display: block;
+}
+.paralax {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/imageparalax.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  flex-direction: column;
+  text-shadow: black 1px 2px 1px;
+}
+.paralax .icon-parallax {
+  display: flex;
+}
+.paralax .icon-parallax figure .icon {
+  width: 25px;
+  padding: 45px 15px;
 }
 .galeriaig {
   display: grid;
@@ -460,6 +481,18 @@
     gap: 1px;
     grid-template: repeat(4, 110px) 220px / repeat(2, 110px);
   }
+  .galeria .galerialist .postgaleria #labelbtn1,
+  .galeria .galerialist #labelbtn2,
+  .galeria .galerialist #labelbtn3,
+  .galeria .galerialist #labelbtn4,
+  .galeria .galerialist #labelbtn5,
+  .galeria .galerialist #labelbtn6,
+  .galeria .galerialist #labelbtn7,
+  .galeria .galerialist #labelbtn8,
+  .galeria .galerialist #labelbtn9 {
+    width: 110px;
+    height: 110px;
+  }
   .galeriaig {
     grid-template: repeat(2, 150px) / repeat(2, 150px);
     height: 350px;
@@ -472,6 +505,18 @@
   .galeria .galerialist {
     gap: 1px;
     grid-template: repeat(4, 160px) 320px / repeat(2, 160px);
+  }
+  .galeria .galerialist .postgaleria #labelbtn1,
+  .galeria .galerialist #labelbtn2,
+  .galeria .galerialist #labelbtn3,
+  .galeria .galerialist #labelbtn4,
+  .galeria .galerialist #labelbtn5,
+  .galeria .galerialist #labelbtn6,
+  .galeria .galerialist #labelbtn7,
+  .galeria .galerialist #labelbtn8,
+  .galeria .galerialist #labelbtn9 {
+    width: 160px;
+    height: 160px;
   }
   .galeriaig {
     grid-template: repeat(2, 200px) / repeat(2, 200px);
@@ -486,6 +531,18 @@
     gap: 1px;
     grid-template: repeat(4, 210px) 420px / repeat(2, 210px);
   }
+  .galeria .galerialist .postgaleria #labelbtn1,
+  .galeria .galerialist #labelbtn2,
+  .galeria .galerialist #labelbtn3,
+  .galeria .galerialist #labelbtn4,
+  .galeria .galerialist #labelbtn5,
+  .galeria .galerialist #labelbtn6,
+  .galeria .galerialist #labelbtn7,
+  .galeria .galerialist #labelbtn8,
+  .galeria .galerialist #labelbtn9 {
+    width: 210px;
+    height: 210px;
+  }
   .galeriaig {
     grid-template: repeat(2, 250px) / repeat(2, 250px);
     height: 500px;
@@ -499,6 +556,18 @@
     gap: 1px;
     grid-template: repeat(4, 260px) 520px / repeat(2, 260px);
   }
+  .galeria .galerialist .postgaleria #labelbtn1,
+  .galeria .galerialist #labelbtn2,
+  .galeria .galerialist #labelbtn3,
+  .galeria .galerialist #labelbtn4,
+  .galeria .galerialist #labelbtn5,
+  .galeria .galerialist #labelbtn6,
+  .galeria .galerialist #labelbtn7,
+  .galeria .galerialist #labelbtn8,
+  .galeria .galerialist #labelbtn9 {
+    width: 260px;
+    height: 260px;
+  }
   .galeriaig {
     grid-template: repeat(2, 250px) / repeat(2, 250px);
     height: 600px;
@@ -511,6 +580,18 @@
   .galeria .galerialist {
     gap: 1px;
     grid-template: repeat(4, 275px) 550px / repeat(2, 275px);
+  }
+  .galeria .galerialist .postgaleria #labelbtn1,
+  .galeria .galerialist #labelbtn2,
+  .galeria .galerialist #labelbtn3,
+  .galeria .galerialist #labelbtn4,
+  .galeria .galerialist #labelbtn5,
+  .galeria .galerialist #labelbtn6,
+  .galeria .galerialist #labelbtn7,
+  .galeria .galerialist #labelbtn8,
+  .galeria .galerialist #labelbtn9 {
+    width: 275px;
+    height: 275px;
   }
   .galeriaig {
     grid-template: repeat(2, 350px) / repeat(2, 350px);
@@ -537,5 +618,17 @@
   .galeria .galerialist {
     gap: 1px;
     grid-template: repeat(4, 325px) 650px / repeat(2, 325px);
+  }
+  .galeria .galerialist .postgaleria #labelbtn1,
+  .galeria .galerialist #labelbtn2,
+  .galeria .galerialist #labelbtn3,
+  .galeria .galerialist #labelbtn4,
+  .galeria .galerialist #labelbtn5,
+  .galeria .galerialist #labelbtn6,
+  .galeria .galerialist #labelbtn7,
+  .galeria .galerialist #labelbtn8,
+  .galeria .galerialist #labelbtn9 {
+    width: 325px;
+    height: 325px;
   }
 }
