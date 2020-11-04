@@ -132,6 +132,10 @@
   background-color: black;
   color: white;
 }
+.galeria .galerialist:nth-child(2),
+.galeria .galerialist:nth-child(3) {
+  display: none;
+}
 .galeria .galerialist {
   display: grid;
   gap: 5px;
@@ -220,10 +224,10 @@
   height: 0px;
   max-width: 1200px;
 }
-.lightbox .lightbox-container .MiDiapositiva {
+.lightbox .lightbox-container .SeccionDiapositivas .MiDiapositiva {
   display: none;
 }
-.lightbox .lightbox-container .MiDiapositiva .NumeroPhoto {
+.lightbox .lightbox-container .SeccionDiapositivas .MiDiapositiva .NumeroPhoto {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;

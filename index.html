@@ -37,7 +37,22 @@ function MostrarDiapositiva(n){
   }
     diapositiva[DiapositivaIndex-1].style.display = "block";
 }
+function CambiarSeccion(n){
+    MostrarSeccion(SeccionIndex += n )
+}
+var SeccionIndex = 0;
+function MostrarSeccion(n){
+    var i;
+    var seccion = document.getElementsByClassName("galerialist")
+    if (n > seccion.length){ SeccionIndex = 1}
+    if (n < 1) {SeccionIndex = seccion.length}
+    for (i = 0; i < seccion.length; i++) {
+        seccion[i].style.display = "none";
+    }
+    seccion[SeccionIndex-1].style.display = "grid";
 
+
+}
    
     </script>
 
@@ -71,41 +86,98 @@ function MostrarDiapositiva(n){
 
         <section id="1" class="galeria">
                 <div>
-                    <a class="btn-antes-section">&#10094;</a>
+                    <a onclick="CambiarSeccion(-1)" class="btn-antes-section">&#10094;</a>
                 </div>
 
-
+                <div id="galerialist" class="galerialist">
+                    <div class="postgaleria">
+                        <img onclick="AbrirModal();DiapositivaActual(1)" class="post_img" id="img1"  src="css/img/seccion1/img1.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                       <img onclick="AbrirModal();DiapositivaActual(2)" class="post_img" id="img2" src="css/img/seccion1/img2.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                        <img onclick="AbrirModal();DiapositivaActual(3)" class="post_img" id="img3" src="css/img/seccion1/img3.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                        <img onclick="AbrirModal();DiapositivaActual(4)" class="post_img" id="img4" src="css/img/seccion1/img4.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                       <img onclick="AbrirModal();DiapositivaActual(5)" class="post_img" id="img5" src="css/img/seccion1/img5.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                       <img onclick="AbrirModal();DiapositivaActual(6)" class="post_img" id="img6" src="css/img/seccion1/img6.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                       <img onclick="AbrirModal();DiapositivaActual(7)" class="post_img" id="img7" src="css/img/seccion1/img7.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                       <img onclick="AbrirModal();DiapositivaActual(8)" class="post_img" id="img8" src="css/img/seccion1/img8.jpg" alt="">
+                    </div>
+                    <div class="postgaleria">
+                        <img onclick="AbrirModal();DiapositivaActual(9)" class="post_img" id="img9" src="css/img/seccion1/img9.jpg" alt="">
+                    </div>
+                </div>
             <div id="galerialist" class="galerialist">
                 <div class="postgaleria">
-                    <img onclick="AbrirModal();DiapositivaActual(1)" class="post_img" id="img1"  src="css/img/img1.jpg" alt="">
+                    <img onclick="AbrirModal();DiapositivaActual(10)" class="post_img" id="img1"  src="css/img/seccion2/img2.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                   <img onclick="AbrirModal();DiapositivaActual(2)" class="post_img" id="img2" src="css/img/img2.jpg" alt="">
+                   <img onclick="AbrirModal();DiapositivaActual(11)" class="post_img" id="img2" src="css/img/seccion2/img4.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                    <img onclick="AbrirModal();DiapositivaActual(3)" class="post_img" id="img3" src="css/img/img3.jpg" alt="">
+                    <img onclick="AbrirModal();DiapositivaActual(12)" class="post_img" id="img3" src="css/img/seccion2/img2.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                    <img onclick="AbrirModal();DiapositivaActual(4)" class="post_img" id="img4" src="css/img/img4.jpg" alt="">
+                    <img onclick="AbrirModal();DiapositivaActual(13)" class="post_img" id="img4" src="css/img/seccion2/img4.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                   <img onclick="AbrirModal();DiapositivaActual(5)" class="post_img" id="img5" src="css/img/img5.jpg" alt="">
+                   <img onclick="AbrirModal();DiapositivaActual(14)" class="post_img" id="img5" src="css/img/seccion2/img2.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                   <img onclick="AbrirModal();DiapositivaActual(6)" class="post_img" id="img6" src="css/img/img6.jpg" alt="">
+                   <img onclick="AbrirModal();DiapositivaActual(15)" class="post_img" id="img6" src="css/img/seccion2/img4.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                   <img onclick="AbrirModal();DiapositivaActual(7)" class="post_img" id="img7" src="css/img/img7.jpg" alt="">
+                   <img onclick="AbrirModal();DiapositivaActual(16)" class="post_img" id="img7" src="css/img/seccion2/img2.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                   <img onclick="AbrirModal();DiapositivaActual(8)" class="post_img" id="img8" src="css/img/img8.jpg" alt="">
+                   <img onclick="AbrirModal();DiapositivaActual(17)" class="post_img" id="img8" src="css/img/seccion2/img4.jpg" alt="">
                 </div>
                 <div class="postgaleria">
-                    <img onclick="AbrirModal();DiapositivaActual(9)" class="post_img" id="img9" src="css/img/img9.jpg" alt="">
+                    <img onclick="AbrirModal();DiapositivaActual(18)" class="post_img" id="img9" src="css/img/seccion2/img2.jpg" alt="">
+                </div>
+            </div>
+            <div id="galerialist" class="galerialist">
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(19)" class="post_img" id="img1"  src="css/img/seccion3/img1.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(20)" class="post_img" id="img2" src="css/img/seccion3/img2.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(21)" class="post_img" id="img3" src="css/img/seccion3/img1.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(22)" class="post_img" id="img4" src="css/img/seccion3/img2.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(23)" class="post_img" id="img5" src="css/img/seccion3/img1.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(24)" class="post_img" id="img6" src="css/img/seccion3/img2.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(25)" class="post_img" id="img7" src="css/img/seccion3/img1.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(26)" class="post_img" id="img8" src="css/img/seccion3/img2.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(27)" class="post_img" id="img9" src="css/img/seccion3/img1.jpg" alt="">
                 </div>
             </div>
                 <div>
-                    <a class="btn-despues-section">&#10095;</a>
+                    <a onclick="CambiarSeccion(1)" class="btn-despues-section">&#10095;</a>
                 </div>
         </section>
         
@@ -118,42 +190,120 @@ function MostrarDiapositiva(n){
 
                 <span class="btn-cerrar cursor" onclick="CerrarModal()">&times;</span>
             <div class="lightbox-container">
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">1 / 9</div>
-                    <img src="css/img/img1.jpg" style="width:100%">
+                <div class="SeccionDiapositivas">
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">1 / 9</div>
+                        <img src="css/img/seccion1/img1.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">2 / 9</div>
+                        <img src="css/img/seccion1/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">3 / 9</div>
+                        <img src="css/img/seccion1/img3.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">4 / 9</div>
+                        <img src="css/img/seccion1/img4.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">5 / 9</div>
+                        <img src="css/img/seccion1/img5.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">6 / 9</div>
+                        <img src="css/img/seccion1/img6.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">7 / 9</div>
+                        <img src="css/img/seccion1/img7.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">8 / 9</div>
+                        <img src="css/img/seccion1/img8.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">9 / 9</div>
+                        <img src="css/img/seccion1/img9.jpg" style="width:100%">
+                    </div>
                 </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">2 / 9</div>
-                    <img src="css/img/img2.jpg" style="width:100%">
+                <div class="SeccionDiapositivas">
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">1 / 9</div>
+                        <img src="css/img/seccion2/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">2 / 9</div>
+                        <img src="css/img/seccion2/img4.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">3 / 9</div>
+                        <img src="css/img/seccion2/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">4 / 9</div>
+                        <img src="css/img/seccion2/img4.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">5 / 9</div>
+                        <img src="css/img/seccion2/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">6 / 9</div>
+                        <img src="css/img/seccion2/img4.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">7 / 9</div>
+                        <img src="css/img/seccion2/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">8 / 9</div>
+                        <img src="css/img/seccion2/img4.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">9 / 9</div>
+                        <img src="css/img/seccion2/img2.jpg" style="width:100%">
+                    </div>
                 </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">3 / 9</div>
-                    <img src="css/img/img3.jpg" style="width:100%">
-                </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">4 / 9</div>
-                    <img src="css/img/img4.jpg" style="width:100%">
-                </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">5 / 9</div>
-                    <img src="css/img/img5.jpg" style="width:100%">
-                </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">6 / 9</div>
-                    <img src="css/img/img6.jpg" style="width:100%">
-                </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">7 / 9</div>
-                    <img src="css/img/img7.jpg" style="width:100%">
-                </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">8 / 9</div>
-                    <img src="css/img/img8.jpg" style="width:100%">
-                </div>
-                <div class="MiDiapositiva">
-                    <div class="NumeroPhoto">9 / 9</div>
-                    <img src="css/img/img9.jpg" style="width:100%">
-                </div>
+                <div class="SeccionDiapositivas">
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">1 / 9</div>
+                        <img src="css/img/seccion3/img1.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">2 / 9</div>
+                        <img src="css/img/seccion3/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">3 / 9</div>
+                        <img src="css/img/seccion3/img1.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">4 / 9</div>
+                        <img src="css/img/seccion3/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">5 / 9</div>
+                        <img src="css/img/seccion3/img1.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">6 / 9</div>
+                        <img src="css/img/seccion3/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">7 / 9</div>
+                        <img src="css/img/seccion3/img1.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">8 / 9</div>
+                        <img src="css/img/seccion3/img2.jpg" style="width:100%">
+                    </div>
+                    <div class="MiDiapositiva">
+                        <div class="NumeroPhoto">9 / 9</div>
+                        <img src="css/img/seccion3/img1.jpg" style="width:100%">
+                    </div>
+                </div>            
             </div>
         </div>
 
