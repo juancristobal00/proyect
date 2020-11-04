@@ -116,17 +116,20 @@
 @media (min-width:300px) and (max-width:1000px){
 .galeria{
     height: 700px;
-    .boton img,a{
-        height: 50px;
-        width: 30px;
-    }
     .galerialist{
-    gap: 5px;
-    grid-template: repeat(6,110px) 220px e("/") repeat(2,110px);}
+        gap: 5px;
+        grid-template: repeat(6,110px) 220px e("/") repeat(2,110px);}
 
     .postgaleria:nth-of-type(9){
-    grid-column: 1 e("/") 3;}
+        grid-column: 1 e("/") 3;}
         }
+    .lightbox{
+       padding-top: 0px;
+        .lightbox-container{
+            top: 35vh;
+            width: 70%;
+        }
+    }
     .galeriaig{
         gap: 0px;
     }
@@ -178,7 +181,7 @@
         }
         .galerialist{
         gap: 1px;
-        grid-template: repeat(4,110px) 220px e("/") repeat(2,110px);
+        grid-template: repeat(4,100px) 200px e("/") repeat(2,100px);
             .postgaleria #labelbtn1,#labelbtn2,#labelbtn3,#labelbtn4,#labelbtn5,#labelbtn6,#labelbtn7,#labelbtn8,#labelbtn9{
             width: 110px;
             height: 110px;            
@@ -187,7 +190,7 @@
     }
     // GALERIA INSTAGRAM
     .galeriaig{
-        grid-template: repeat(2,150px) e("/") repeat(2,150px);
+        grid-template: repeat(2,140px) e("/") repeat(2,140px);
         height: 350px;
     }
 }
@@ -196,7 +199,7 @@
         height: 960px;
         .galerialist{
             gap: 1px;
-            grid-template: repeat(4,160px) 320px e("/") repeat(2,160px);
+            grid-template: repeat(4,150px) 300px e("/") repeat(2,150px);
             .postgaleria #labelbtn1,#labelbtn2,#labelbtn3,#labelbtn4,#labelbtn5,#labelbtn6,#labelbtn7,#labelbtn8,#labelbtn9{
                 width: 160px;
                 height: 160px;            
@@ -204,7 +207,7 @@
     }}
     
     .galeriaig{
-        grid-template: repeat(2,200px) e("/") repeat(2,200px);
+        grid-template: repeat(2,190px) e("/") repeat(2,190px);
         height: 400px;}
 
 }
@@ -213,7 +216,7 @@
         height: 1260px;
         .galerialist{
             gap: 1px;
-            grid-template: repeat(4,210px) 420px e("/") repeat(2,210px);
+            grid-template: repeat(4,200px) 400px e("/") repeat(2,200px);
             .postgaleria #labelbtn1,#labelbtn2,#labelbtn3,#labelbtn4,#labelbtn5,#labelbtn6,#labelbtn7,#labelbtn8,#labelbtn9{
                 width: 210px;
                 height: 210px;            
@@ -221,7 +224,7 @@
     }}
     
     .galeriaig{
-        grid-template: repeat(2,250px) e("/") repeat(2,250px);
+        grid-template: repeat(2,240px) e("/") repeat(2,240px);
         height: 500px;}
 }
 @media (min-width:600px) and (max-width:700px){
@@ -229,7 +232,7 @@
         height: 1560px;
         .galerialist{
             gap: 1px;
-            grid-template: repeat(4,260px) 520px e("/") repeat(2,260px);
+            grid-template: repeat(4,250px) 500px e("/") repeat(2,250px);
             .postgaleria #labelbtn1,#labelbtn2,#labelbtn3,#labelbtn4,#labelbtn5,#labelbtn6,#labelbtn7,#labelbtn8,#labelbtn9{
                 width: 260px;
                 height: 260px;            
@@ -244,14 +247,14 @@
         height: 1650px;
         .galerialist{
             gap: 1px;
-            grid-template: repeat(4,275px) 550px e("/") repeat(2,275px);
+            grid-template: repeat(4,265px) 530px e("/") repeat(2,265px);
             .postgaleria #labelbtn1,#labelbtn2,#labelbtn3,#labelbtn4,#labelbtn5,#labelbtn6,#labelbtn7,#labelbtn8,#labelbtn9{
                 width: 275px;
                 height: 275px;            
             } 
     }}
     .galeriaig{
-        grid-template: repeat(2,350px) e("/") repeat(2,350px);
+        grid-template: repeat(2,340px) e("/") repeat(2,340px);
         height: 750px;}
 }
 @media (min-width:800px) and (max-width:900px){
@@ -262,7 +265,7 @@
             grid-template: repeat(4,300px) 600px e("/") repeat(2,300px);
     }}
     .galeriaig{
-        grid-template: repeat(2,400px) e("/") repeat(2,400px);
+        grid-template: repeat(2,390px) e("/") repeat(2,390px);
         height: 800px;}
 }
 @media (min-width:900px) and (max-width:1000px){

@@ -9,116 +9,36 @@
 </head>
 <body>
     <script>
-        const http = require('http');
+   function AbrirModal() {
+  document.getElementById("MiLightbox").style.display = "block";
+}
 
-const hostname = '192.168.1.14';
-const port = 3000;
+function CerrarModal() {
+  document.getElementById("MiLightbox").style.display = "none";
+}
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
-    var desactivarlabel = function(){
-        document.getElementById("labelbtn1").style.zIndex="0"
-        document.getElementById("labelbtn2").style.zIndex="0"
-        document.getElementById("labelbtn3").style.zIndex="0"
-        document.getElementById("labelbtn4").style.zIndex="0"
-        document.getElementById("labelbtn5").style.zIndex="0"
-        document.getElementById("labelbtn6").style.zIndex="0"
-        document.getElementById("labelbtn7").style.zIndex="0"
-        document.getElementById("labelbtn8").style.zIndex="0"
-        document.getElementById("labelbtn9").style.zIndex="0" 
-    }
-    var activarlabel = function(){
-        document.getElementById("labelbtn1").style.zIndex="2"
-        document.getElementById("labelbtn2").style.zIndex="2"
-        document.getElementById("labelbtn3").style.zIndex="2"
-        document.getElementById("labelbtn4").style.zIndex="2"
-        document.getElementById("labelbtn5").style.zIndex="2"
-        document.getElementById("labelbtn6").style.zIndex="2"
-        document.getElementById("labelbtn7").style.zIndex="2"
-        document.getElementById("labelbtn8").style.zIndex="2"
-        document.getElementById("labelbtn9").style.zIndex="2"  
-    }
-    var desactivar = function(op){
-    var x = window.scrollX;
-    var y = window.scrollY;
-    if(op == btn){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img1").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn2){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img2").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn3){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img3").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn4){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img4").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn5){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img5").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn6){
-        window.onscroll = function(){window.scrollTo(x,y)}      
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img6").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn7){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img7").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn8){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img8").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }else if(op == btn9){
-        window.onscroll = function(){window.scrollTo(x,y)}
-        document.getElementById("arrowback").classList.add("onarrow")
-        document.getElementById("img9").classList.add("active")
-        document.getElementById("ov").classList.add("ovactive")
-        desactivarlabel();
-    }}
+function CambiarDiapositiva(n) {
+  MostrarDiapositiva(DiapositivaIndex += n);
+}
 
-    var cerrarlightbox = function(btn10){
-        window.onscroll = null;
-        document.getElementById("arrowback").classList.remove("onarrow")
-        document.getElementById("ov").classList.remove("ovactive")
-        document.getElementById("img1").classList.remove("active")
-        document.getElementById("img2").classList.remove("active")
-        document.getElementById("img3").classList.remove("active")
-        document.getElementById("img4").classList.remove("active")
-        document.getElementById("img5").classList.remove("active")
-        document.getElementById("img6").classList.remove("active")
-        document.getElementById("img7").classList.remove("active")
-        document.getElementById("img8").classList.remove("active")
-        document.getElementById("img9").classList.remove("active")
-        activarlabel();
-    }
+
+function DiapositivaActual(n) {
+  MostrarDiapositiva(DiapositivaIndex = n);
+}
+
+function MostrarDiapositiva(n){
+    var i;
+    var diapositiva = document.getElementsByClassName("MiDiapositiva")
+    if (n > diapositiva.length) {DiapositivaIndex = 1}
+    if (n < 1) {DiapositivaIndex = diapositiva.length}
+    for (i = 0; i < diapositiva.length; i++) {
+    diapositiva[i].style.display = "none";
+  }
+    diapositiva[DiapositivaIndex-1].style.display = "block";
+}
+
+   
     </script>
 
     <header class="menubox">
@@ -137,8 +57,8 @@ server.listen(port, hostname, () => {
             </label>
         </div>
         <figure class="menuicon"">
-            <a class="icon" href=""><img src="css/img/icons/Icono Facebook.svg" alt=""></a>
-            <a class="icon" href=""><img src="css/img/icons/Icono Instagram.svg" alt=""></a>
+            <a class="icon" href=""><img src="/css/img/Icono Facebook.svg" alt=""></a>
+            <a class="icon" href=""><img src="/css/img/Icono Instagram.svg" alt=""></a>
         </figure>
     </header>
     <header class="portada">
@@ -147,43 +67,102 @@ server.listen(port, hostname, () => {
         <h3 style="text-shadow: black 1px 1px 1px;">Portafolio</h3>
     </header>
     <section class="titulogaleria"><span><p class="tittle">Galeria</p></span></section>  
-    <input class="input_lightbox" onclick="desactivar(btn)" type="checkbox" name="" id="btn">
-    <input class="input_lightbox" onclick="desactivar(btn2)" type="checkbox" name="" id="btn2">
-    <input class="input_lightbox" onclick="desactivar(btn3)" type="checkbox" name="" id="btn3">
-    <input class="input_lightbox" onclick="desactivar(btn4)" type="checkbox" name="" id="btn4">
-    <input class="input_lightbox" onclick="desactivar(btn5)" type="checkbox" name="" id="btn5">
-    <input class="input_lightbox" onclick="desactivar(btn6)" type="checkbox" name="" id="btn6">
-    <input class="input_lightbox" onclick="desactivar(btn7)" type="checkbox" name="" id="btn7">
-    <input class="input_lightbox" onclick="desactivar(btn8)" type="checkbox" name="" id="btn8">
-    <input class="input_lightbox" onclick="desactivar(btn9)" type="checkbox" name="" id="btn9">
-    <div id="ov" class="overflow"></div>
-        <figure id="arrowback" class="figure_arrow" style="width: 30px; padding: 20px 20px;">
-            <a href="#1" onclick="cerrarlightbox()" id="btn10"><img src="css/img/icons/arrowback.svg" alt=""></a>
-        </figure>
+
+
         <section id="1" class="galeria">
                 <div>
-                    <a class="boton left" href=""><img src="css/img/icons/boton atras.svg" alt=""></a>
+                    <a class="btn-antes-section">&#10094;</a>
                 </div>
+
+
             <div id="galerialist" class="galerialist">
-                <div class="postgaleria"><label id="labelbtn1" for="btn"></label><img class="post_img" id="img1"  src="css/img/img1.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn2" for="btn2"></label><img class="post_img" id="img2" src="css/img/img2.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn3" for="btn3"></label><img class="post_img" id="img3" src="css/img/img3.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn4" for="btn4"></label><img class="post_img" id="img4" src="css/img/img4.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn5" for="btn5"></label><img class="post_img" id="img5" src="css/img/img5.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn6" for="btn6"></label><img class="post_img" id="img6" src="css/img/img6.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn7" for="btn7"></label><img class="post_img" id="img7" src="css/img/img7.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn8" for="btn8"></label><img class="post_img" id="img8" src="css/img/img8.jpg" alt=""></div>
-                <div class="postgaleria"><label id="labelbtn9" for="btn9"></label><img class="post_img" id="img9" src="css/img/img9.jpg" alt=""></div>
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(1)" class="post_img" id="img1"  src="css/img/img1.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(2)" class="post_img" id="img2" src="css/img/img2.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(3)" class="post_img" id="img3" src="css/img/img3.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(4)" class="post_img" id="img4" src="css/img/img4.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(5)" class="post_img" id="img5" src="css/img/img5.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(6)" class="post_img" id="img6" src="css/img/img6.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(7)" class="post_img" id="img7" src="css/img/img7.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                   <img onclick="AbrirModal();DiapositivaActual(8)" class="post_img" id="img8" src="css/img/img8.jpg" alt="">
+                </div>
+                <div class="postgaleria">
+                    <img onclick="AbrirModal();DiapositivaActual(9)" class="post_img" id="img9" src="css/img/img9.jpg" alt="">
+                </div>
             </div>
                 <div>
-                    <a class="boton right" href=""><img src="./img/icons/boton adelante.svg" alt=""></a>
+                    <a class="btn-despues-section">&#10095;</a>
                 </div>
         </section>
+        
+        <!-- Modal Lightbox -->
+
+        <div id="MiLightbox" class="lightbox">
+
+                <a class="btn-antes" onclick="CambiarDiapositiva(-1)">&#10094;</a>
+                <a class="btn-despues" onclick="CambiarDiapositiva(1)">&#10095;</a>
+
+                <span class="btn-cerrar cursor" onclick="CerrarModal()">&times;</span>
+            <div class="lightbox-container">
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">1 / 9</div>
+                    <img src="css/img/img1.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">2 / 9</div>
+                    <img src="css/img/img2.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">3 / 9</div>
+                    <img src="css/img/img3.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">4 / 9</div>
+                    <img src="css/img/img4.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">5 / 9</div>
+                    <img src="css/img/img5.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">6 / 9</div>
+                    <img src="css/img/img6.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">7 / 9</div>
+                    <img src="css/img/img7.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">8 / 9</div>
+                    <img src="css/img/img8.jpg" style="width:100%">
+                </div>
+                <div class="MiDiapositiva">
+                    <div class="NumeroPhoto">9 / 9</div>
+                    <img src="css/img/img9.jpg" style="width:100%">
+                </div>
+            </div>
+        </div>
+
+    
         <section class="paralax">
             <h1>Sigueme en mis redes sociales</h1>
             <div class="icon-parallax">
-                <figure><img class="icon" src="css/img/icons/icon fb.svg" alt=""></figure>
-                <figure><img class="icon" src="css/img/icons/icon ig.svg" alt=""></figure>
+                <figure><img class="icon" src="/css/img/icon fb.svg" alt=""></figure>
+                <figure><img class="icon" src="/css/img/icon ig.svg" alt=""></figure>
             </div>
         </section>
 <section class="tituloinstagram"><span><p class="tittle">Instagram</p></span></section>  
