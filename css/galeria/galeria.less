@@ -1,7 +1,9 @@
 .galeria{
+
     .displayflex-between;
     height: 700px;
     padding-bottom: 100px;
+    transition: all 1s;
     .btn-antes-section,
     .btn-despues-section{
         padding: 16px;
@@ -13,15 +15,24 @@
         background-color: black;
         color: white;
     }
+    .fade{
+      opacity: 0;
+      transition: 2s;
+      transform: translateY(50px);
+    }
+    
     .galerialist:nth-child(2),
     .galerialist:nth-child(3){
       display: none;
+      
     }
     .galerialist{
         display: grid;
         gap: 5px;
         grid-template: repeat(7,100px) e("/") repeat(3,200px);
         transition: all 1s ease;
+        opacity: 1;
+        
         .postgaleria .post_img{
             width: 100%;
             height: 100%;

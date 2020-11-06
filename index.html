@@ -10,38 +10,50 @@
 <body>
     <script>
    function AbrirModal() {
+
   document.getElementById("MiLightbox").style.display = "block";
+
 }
 
 function CerrarModal() {
+
   document.getElementById("MiLightbox").style.display = "none";
+
 }
 
 
 function CambiarDiapositiva(n) {
+
   MostrarDiapositiva(DiapositivaIndex += n);
+
 }
 
 
 function DiapositivaActual(n) {
+
   MostrarDiapositiva(DiapositivaIndex = n);
+
 }
 
 function MostrarDiapositiva(n){
+
     var i;
     var diapositiva = document.getElementsByClassName("MiDiapositiva")
     if (n > diapositiva.length) {DiapositivaIndex = 1}
     if (n < 1) {DiapositivaIndex = diapositiva.length}
     for (i = 0; i < diapositiva.length; i++) {
+
     diapositiva[i].style.display = "none";
   }
     diapositiva[DiapositivaIndex-1].style.display = "block";
 }
+
 function CambiarSeccion(n){
-    MostrarSeccion(SeccionIndex += n )
+    MostrarSeccion(SeccionIndex += n );
 }
 var SeccionIndex = 0;
 function MostrarSeccion(n){
+
     var i;
     var seccion = document.getElementsByClassName("galerialist")
     if (n > seccion.length){ SeccionIndex = 1}
@@ -50,10 +62,28 @@ function MostrarSeccion(n){
         seccion[i].style.display = "none";
     }
     seccion[SeccionIndex-1].style.display = "grid";
+    seccion[SeccionIndex-1].style.opacity = "1";
 
 
 }
-   
+document.addEventListener('DOMContentLoaded',() => {
+        let fade = document.querySelectorAll(".fade");
+        
+        
+        function mostrarScroll() {
+             let ScrollTop = document.documentElement.scrollTop;
+                for (var i=0; i < fade.length; i++){
+                    let alturaAnimado = fade[i].offsetTop;
+                    if (alturaAnimado - 700 < ScrollTop){
+                        fade[i].style.opacity = "1";
+                        fade[i].style.transform = "translateY(0px)"
+                    }
+                   
+
+                }
+            }
+        window.addEventListener("scroll", mostrarScroll);
+    });
     </script>
 
     <header class="menubox">
@@ -148,31 +178,31 @@ function MostrarSeccion(n){
                 </div>
             </div>
             <div id="galerialist" class="galerialist">
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                     <img onclick="AbrirModal();DiapositivaActual(19)" class="post_img" id="img1"  src="css/img/seccion3/img1.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                    <img onclick="AbrirModal();DiapositivaActual(20)" class="post_img" id="img2" src="css/img/seccion3/img2.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                     <img onclick="AbrirModal();DiapositivaActual(21)" class="post_img" id="img3" src="css/img/seccion3/img1.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                     <img onclick="AbrirModal();DiapositivaActual(22)" class="post_img" id="img4" src="css/img/seccion3/img2.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                    <img onclick="AbrirModal();DiapositivaActual(23)" class="post_img" id="img5" src="css/img/seccion3/img1.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                    <img onclick="AbrirModal();DiapositivaActual(24)" class="post_img" id="img6" src="css/img/seccion3/img2.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                    <img onclick="AbrirModal();DiapositivaActual(25)" class="post_img" id="img7" src="css/img/seccion3/img1.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                    <img onclick="AbrirModal();DiapositivaActual(26)" class="post_img" id="img8" src="css/img/seccion3/img2.jpg" alt="">
                 </div>
-                <div class="postgaleria">
+                <div class="postgaleria fade">
                     <img onclick="AbrirModal();DiapositivaActual(27)" class="post_img" id="img9" src="css/img/seccion3/img1.jpg" alt="">
                 </div>
             </div>
@@ -317,35 +347,35 @@ function MostrarSeccion(n){
         </section>
 <section class="tituloinstagram"><span><p class="tittle">Instagram</p></span></section>  
 <section class="galeriaig">
-    <div style="background-image: url(css/img/seccion1/img2.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(css/img/seccion1/img3.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(css/img/seccion1/img4.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(css/img/seccion1/img5.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(css/img/seccion1/img6.jpg);" class="postinstagram"></div>
-    <div style="background-image: url(css/img/seccion1/img7.jpg);" class="postinstagram"></div>
+    <div style="background-image: url(css/img/seccion1/img2.jpg);" class="postinstagram fade"></div>
+    <div style="background-image: url(css/img/seccion1/img3.jpg);" class="postinstagram fade"></div>
+    <div style="background-image: url(css/img/seccion1/img4.jpg);" class="postinstagram fade"></div>
+    <div style="background-image: url(css/img/seccion1/img5.jpg);" class="postinstagram fade"></div>
+    <div style="background-image: url(css/img/seccion1/img6.jpg);" class="postinstagram fade"></div>
+    <div style="background-image: url(css/img/seccion1/img7.jpg);" class="postinstagram fade"></div>
 </section>   
 <section class="titulocontacto"><span><p class="tittle">Contacto</p></span></section>  
 <section id="2" class="contacto">
     <form class="formulario" id="form" name="formu" action="">
-        <div class="item nombre">
+        <div class="item nombre fade">
             <input style=" text-align: center; width: 100%; border: none; background-color: #F5F5F5 ;" type="text" name="nombre" id="nombre" placeholder="nombre" maxlength="20" class="space" >
         </div>
-        <div class="item email">
+        <div class="item email fade">
             <input style=" text-align: center; width: 100%; border: none; background-color: #F5F5F5 ; "type="email" name="email" id="email" placeholder="email" maxlength="40" required class="space">
         </div>
-        <div class="item mensaje">
+        <div class="item mensaje fade">
             <input style=" text-align: center; width: 100%; border: none; background-color: #F5F5F5 ;" type="text" name="mensaje" id="mensaje" placeholder="mensaje" maxlength="200" class="space" >
         </div>
-        <div class="item enviar">
+        <div class="item enviar fade">
             <input onclick="comprobar()" type="submit" value="enviar" style="cursor: pointer; height: 100%; width: 100%; background-color: black; border: none; color: white;">
         </div>
     
-        <div class="itemrrss mail"><figure><img src="css/img/email.png" alt=""></figure><p>+56993668681</p></div>
-        <div class="itemrrss telefono"><figure><img src="css/img/call.png" alt=""></figure><p>edu.rivas@gmail.com</p></div>
-        <div class="itemrrss redes">
+        <div class="itemrrss mail fade"><figure><img src="css/img/email.png" alt=""></figure><p>+56993668681</p></div>
+        <div class="itemrrss telefono fade"><figure><img src="css/img/call.png" alt=""></figure><p>edu.rivas@gmail.com</p></div>
+        <div class="itemrrss redes fade">
             <figure class="icon-rrss">
-                <a href=""><img class="icon"src="css/img/icons/icon fb.svg" alt=""></a>
-                <a href=""><img class="icon" src="css/img/icons/icon ig.svg" alt=""></a>
+                <a href=""><img class="icon" src="/css/img/icon fb.svg" alt=""></a>
+                <a href=""><img class="icon" src="/css/img/icon ig.svg" alt=""></a>
             </figure>
         </div>
     </form>

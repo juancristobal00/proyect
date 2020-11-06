@@ -120,6 +120,7 @@
   align-items: center;
   height: 700px;
   padding-bottom: 100px;
+  transition: all 1s;
 }
 .galeria .btn-antes-section,
 .galeria .btn-despues-section {
@@ -132,6 +133,11 @@
   background-color: black;
   color: white;
 }
+.galeria .fade {
+  opacity: 0;
+  transition: 2s;
+  transform: translateY(50px);
+}
 .galeria .galerialist:nth-child(2),
 .galeria .galerialist:nth-child(3) {
   display: none;
@@ -141,6 +147,7 @@
   gap: 5px;
   grid-template: repeat(7, 100px) / repeat(3, 200px);
   transition: all 1s ease;
+  opacity: 1;
 }
 .galeria .galerialist .postgaleria .post_img {
   width: 100%;
@@ -281,6 +288,11 @@
   align-content: center;
   height: 550px;
 }
+.galeriaig .fade {
+  opacity: 0;
+  transition: 2.5s;
+  transform: translateY(50px);
+}
 .formulario {
   margin-top: 50px;
   display: grid;
@@ -297,6 +309,11 @@
 .formulario .mensaje input:focus {
   outline: none;
   place-items: none;
+}
+.formulario .fade {
+  opacity: 0;
+  transition: 2.5s;
+  transform: translateY(50px);
 }
 .formulario .nombre {
   grid-row: 1 / 2;
